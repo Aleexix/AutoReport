@@ -1,14 +1,13 @@
 import "../Global.css";
-import Animacionlottie from "../components/Animacionlottie";// Asegúrate de que la ruta sea correcta
 
 
 const Index = () => {
   return (
     <>
-      <div className="relative pt-20 z-10 lg:pt-28">
+      <div className="relative pt-20  lg:pt-28">
         <div className="relative z-10 container px-4 mx-auto">
           <div className="relative mb-24 text-center md:max-w-4xl mx-auto"><img className="absolute top-44 -left-36" src="src/images/star2.svg" alt="" /><img className="absolute top-10 -right-36" src="src/Images/star2.svg" alt="" /><span className="inline-block mb-2.5 text-sm text-blueI font-medium tracking-tighter">Inicio</span>
-            <h1 className="font-heading mb-10 text-7xl lg:text-8xl xl:text-10xl text-white tracking-tighter">Descarga tu archivo semanal aqui</h1>
+            <h1 className=" mb-10 text-7xl lg:text-8xl xl:text-10xl text-white tracking-tighter">Descarga tu reporte semanal hoy</h1>
             <div className="flex justify-center">
               <button className="px-8 py-4 tracking-tighter flex items-center bg-greenE hover:bg-green-900 text-black focus:ring-4 focus:ring-blueI focus:ring-opacity-40 rounded-full transition duration-300 font-medium">
                 <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -18,7 +17,7 @@ const Index = () => {
               </button>
             </div>
           </div>
-          <div className="relative max-w-max mx-auto"><img src="src/Images/freepik__background__64688 1.svg" alt=""/>
+          <div className="relative max-w-max mx-auto"><img src="src/Images/Vector (1).svg" alt=""/>
           <img className="absolute top-7 -right-64" src="src/Images/star.svg" alt="" /></div>
         </div>
         <img className="absolute bottom-0  right-0" src="src/Images/lines2.svg" alt="" />

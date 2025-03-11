@@ -123,11 +123,23 @@ body {
   /* 2 */
 }
 
-/*
-1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-3. Ensure horizontal rules are visible by default.
-*/
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  /* src/index.css */
+  body {
+    font-family: "IBM Plex Sans", sans-serif;
+    margin: 0; /* Para eliminar márgenes predeterminados */
+    padding: 0; /* Para eliminar relleno predeterminado */
+}
+
+/* Opcional: Aplica la fuente a otros elementos */
+h1, h2, h3, p {
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
 
 hr {
   height: 0;

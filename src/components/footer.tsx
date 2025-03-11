@@ -11,17 +11,18 @@ const Footer = () => {
                 {/* Iconos de redes sociales */}
                 <div className="flex justify-center mt-8">
                     <div className="flex space-x-6">
-                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                            <img src="src/Images/icons8-facebook.svg" className="w-10 h-10" alt="Facebook" />
+                        <a href="https://www.slack.com" target="_blank" rel="noopener noreferrer">
+                            <img src="src/Images/slack-svgrepo-com.svg" className="w-10 h-10" alt="Facebook" />
                         </a>
-                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                            <img src="src/Images/icons8-youtube.svg" className="w-10 h-10" alt="YouTube" />
+                        <a href="mailto:Alexix.Orostegui@ibm.com" target="_blank" rel="noopener noreferrer">
+                            <img src="src/Images/ms-outlook-svgrepo-com.svg" className="w-10 h-10" alt="Outlook" />
                         </a>
-                        <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">
-                            <img src="src/Images/icons8-x.svg" className="w-10 h-10" alt="Twitter/X" />
+
+                        <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
+                            <img src="src/Images/github-142-svgrepo-com.svg" className="w-10 h-10" alt="Twitter/X" />
                         </a>
-                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                            <img src="src/Images/icons8-instagram.svg" className="w-10 h-10" alt="Instagram" />
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <img src="src/Images/linkedin-svgrepo-com.svg" className="w-10 h-10" alt="Instagram" />
                         </a>
                     </div>
                 </div>

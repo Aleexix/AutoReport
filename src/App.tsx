@@ -6,6 +6,7 @@ import Index from "./pages/Index";
 import Maintenance from "./components/maintenance";
 import About from "./pages/About";
 import Weekly from "./pages/Weekly";
+import ContactUs from "./pages/Contact us";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/" element={<Index />} />
         <Route path="/semanal" element={<Weekly />} />
         <Route path="/sobre nosotros" element={<About />} />
-        {/* <Route path="/contactanos" element={<Contactanos />} /> */}
+        <Route path="/contactanos" element={<ContactUs />} /> 
       </Routes>
       <Maintenance />
       <Footer />
