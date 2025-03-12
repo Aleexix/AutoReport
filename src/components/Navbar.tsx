@@ -23,7 +23,7 @@ const Navbar = () => {
                     <Link to="/sobre nosotros">Nosotros</Link>
                     </li>
                     <li className="mr-12 text-white font-medium hover:text-opacity-90 tracking-tighter">
-                    <Link to="/contactanos">Ayuda/Soporte</Link>
+                    <Link to="/contactanos">Ayuda</Link>
                     </li>
                     <li className="text-white font-medium hover:text-opacity-90 tracking-tighter">
                     <Link to="/semanal">Historico</Link>
