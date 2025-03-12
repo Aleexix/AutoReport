@@ -7,6 +7,10 @@ import Maintenance from "./components/maintenance";
 import About from "./pages/About";
 import Weekly from "./pages/Weekly";
 import ContactUs from "./pages/Contact us";
+import ScrollToTop from './components/ScrollTop';
+
+
+
 
 function App() {
   return (
@@ -18,6 +22,7 @@ function App() {
         <Route path="/sobre nosotros" element={<About />} />
         <Route path="/contactanos" element={<ContactUs />} /> 
       </Routes>
+      <ScrollToTop />
       <Maintenance />
       <Footer />
     </Router>
