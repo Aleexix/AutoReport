@@ -73,7 +73,7 @@ const Index = () => {
   <div className="flex justify-between items-center pt-3 ml-4">
     <div>
       <h1 className=" text-2xl">Forecast</h1>
-      <p className="mt-2">17  /02/2025</p>
+      <p className="mt-2">17/02/2025</p>
     </div>
     <div>
       <button className="text-white text-md font-semibold bg-blueI py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-500 transform-gpu hover:scale-110">Lunes</button>

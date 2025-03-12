@@ -3,16 +3,20 @@ const About = () => {
     return (
         <>
             <section className="py-20 overflow-hidden">
+                
                 <div className="container px-4 mx-auto">
-                    <div className="md:max-w-xl text-center mx-auto mb-20"><span className="inline-block mb-4 text-sm text-blueI font-medium tracking-tighter">Sobre nosotros</span>
+                <img className="absolute top-51 right-15 z-10 " src="src/Images/star.svg" alt="" /><img className="absolute top-56 right-26 z-10" src="src/Images/star2.svg" alt="" />
+                    <div className="md:max-w-xl text-center mx-auto mb-50 mt-8 "><span className="inline-block mb-4 text-sm text-blueI font-medium tracking-tighter">Sobre nosotros</span>
                         <h2 className="font-heading text-7xl text-white tracking-tighter-xl">Nuestra visión, tecnología y equipo.</h2>
                     </div>
+                    <img className="absolute bottom-0  right-0" src="src/Images/lines2.svg" alt="" />
+                    <img className="absolute top-133 right-12 z-10" src="src/Images/star.svg" alt="" />
                     <div className="max-w-5xl mx-auto">
                         <div className="flex flex-wrap lg:items-center -m-8 lg:-m-12">
                             <div className="w-full md:w-1/2 p-8 lg:p-12">
                                 <div className="max-w-max mx-auto"><img className="rounded-3xl" src="src/Images/freepik__background__77229.png" alt="" /></div>
                             </div>
-                            <div className="w-full md:w-1/2 p-8 lg:p-12"><span className="inline-block mb-4 text-sm text-blueI font-medium tracking-tighter">Sobre Nosotros</span>
+                            <div className="w-full md:w-1/2 p-8  lg:p-12"><span className="inline-block mb-4 text-sm text-blueI font-medium tracking-tighter">Sobre Nosotros</span>
                                 <h2 className="mb-6 text-6xl md:text-7xl text-white tracking-tighter">Practicantes con un objetivo claro</h2>
                                 <p className="mb-10 text-white text-opacity-60 md:max-w-xs">Hola! nosotros somos practicantes de IBm en la unidad de ventas en el año 2025, este proyecto sale de una necesidad de automatizacion de la unidad...</p><a className="inline-block px-8 py-4 text-white hover:text-black font-medium tracking-tighter hover:bg-blueI border-2 border-blueI focus:border-blueIfocus:border-opacity-40 hover:borderblueI focus:ring-4 focus:ring-blueI focus:ring-opacity-40 rounded-full transition duration-300" href="#">Leer mas</a>
                             </div>
