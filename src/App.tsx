@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Weekly from "./pages/Weekly";
 import ContactUs from "./pages/Contact us";
 import ScrollToTop from './components/ScrollTop';
+import { ThemeProvider } from "./context/Themecontext";
 
 
 
@@ -15,6 +16,7 @@ import ScrollToTop from './components/ScrollTop';
 function App() {
   return (
     <Router>
+      <ThemeProvider>
       <Navbar />
       <Routes>
         <Route path="/" element={<Index />} />
@@ -25,6 +27,7 @@ function App() {
       <ScrollToTop />
       <Maintenance />
       <Footer />
+      </ThemeProvider>
     </Router>
   );
 }

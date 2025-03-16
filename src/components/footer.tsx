@@ -1,17 +1,27 @@
+import { useContext } from "react";
+import { ThemeContext } from "../context/Themecontext";
 import "../Global.css";
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>;
 <link rel="preconnect" href="https://fonts.gstatic.com"></link>;
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> </link>;
 
 const Footer = () => {
+    const themeContext = useContext(ThemeContext);
+      
+        if (!themeContext) {
+          throw new Error("Navbar debe estar dentro de un ThemeProvider");
+        }
+      
+        const { darkMode} = themeContext;
+      
     return (
-        <footer className="bg-gray-50 overflow-hidden ">
-            <div className="py-12 bg-body rounded-b-7xl"></div>
+        <footer className= {`overflow-hidden ${darkMode ? 'bg-gray-50 ' : 'bg-body'} `} >
+            <div className= {`py-12 rounded-b-7xl ${darkMode ? 'bg-body': 'bg-white'} `}></div>
             <div className="py-8">
 
                 {/* Menú de navegación */}
                 <div className="mt-6 text-center">
-                    <ul className="flex justify-center space-x-8 text-black  font-semibold">
+                    <ul className={`flex justify-center space-x-8 ${darkMode ? 'text-black ': 'text-white'}`} >
                         <li className="hover:text-blueI"><a href="#">Ayuda</a></li>
                         <li className="hover:text-blueI"><a href="#">Nosotros</a></li>
                         <li className="hover:text-blueI"><a href="#">Historico</a></li>
@@ -19,7 +29,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 {/* Derechos de autor */}
-                <div className="mt-6 text-center text-gray-600">
+                <div className={`mt-6 text-center ${darkMode ? ' text-gray-600 ': ' text-gray-400'}`}>    
                     AutoReport Copyright © 2025 AutoReport - Todos los derechos reservados || Diseñado por: Alexix.O
                 </div>
             </div>

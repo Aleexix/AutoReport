@@ -1,11 +1,21 @@
+import { useContext } from "react";
 import "../Global.css";
+import { ThemeContext } from "../context/Themecontext";
 
 const Maintenance = () => {
+   const themeContext = useContext(ThemeContext);
+  
+    if (!themeContext) {
+      throw new Error("Navbar debe estar dentro de un ThemeProvider");
+    }
+  
+    const { darkMode} = themeContext;
+  
     return (
 <>
-<section className="py-2">
+<section className={`py-2 ${ darkMode ? 'bg-body' : 'bg-white'}`}>
         <div className="container px-4 mx-auto ">
-          <div className="relative pt-20 px-4 bg-gray-900 bg-opacity-20 overflow-hidden rounded-6xl">
+          <div className={`relative pt-20 px-4 overflow-hidden rounded-3xl ${darkMode ? ' bg-gray-900 bg-opacity-20' : 'bg-gray-900'}`}>
             <div className="text-center md:max-w-xl mx-auto removed pb-20"><span className="inline-block mb-4 text-sm text-blueI font-medium tracking-tighter">Redes de comunicacion</span>
               <h2 className="font-heading mb-6 text-7xl text-white tracking-8xl">¿Necesitas Ayuda?</h2>
               <div>
