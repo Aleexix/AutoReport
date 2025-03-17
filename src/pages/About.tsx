@@ -28,10 +28,10 @@ const themeContext = useContext(ThemeContext);
                             </div>
                             <div className="w-full md:w-1/2 p-8 mt-60  lg:p-12"><span className="inline-block mb-4 text-sm text-blueI font-medium tracking-tighter">Sobre Nosotros</span>
                                 <h2 className= {`mb-6 text-6xl md:text-7xl tracking-tighter ${darkMode ? 'text-white':'text-black'}`}>Practicantes con un objetivo claro</h2>
-                                <p className= {`mb-10  text-opacity-60 w-96 ${darkMode ? 'text-white':'text-gray-900'}`}>Hola! nosotros somos practicantes de IBm en la unidad de ventas en el año 2025, este proyecto sale de una necesidad de automatizacion de la unidad...</p>
+                                <p className= {`mb-10  text-opacity-60 w-96 ${darkMode ? 'text-white':'text-gray-900'}`}>Hola! nosotros somos practicantes de IBM en la unidad de ventas en el año 2025, este proyecto sale de una necesidad de automatizacion de la unidad...</p>
                                 <a className="inline-block px-8 py-4 text-black  font-medium bg-blueI tracking-tighter hover:bg-blueI border-2 border-blueI focus:border-blueI focus:border-opacity-40 hover:borderblueI focus:ring-4 focus:ring-blueI focus:ring-opacity-40 rounded-full transition-transform duration-300 transform hover:scale-105" href="#">Leer mas</a>
                             </div>
-                        </div>
+                        </div><img className="absolute top-0 left-48 z-0 " src={`${darkMode ? 'src/Images/layer-blur.svg':''}`} alt="" />
                     </div>
                 </div>
             </section>

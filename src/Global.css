@@ -22,3 +22,7 @@
 .scroll-to-top.visible {
   opacity: 1;
 }
+
+*{
+  font-family: 'IBM Plex sans', sans-serif;
+}

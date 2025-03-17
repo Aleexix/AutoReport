@@ -43,7 +43,7 @@ const Index: React.FC = () => {
         </div>
         <img className="absolute bottom-0  right-0" src={`${darkMode ? 'src/Images/lines2.svg' : 'src/Images/Group 1.svg'}  `} alt="" />
         <img className="absolute right-14 z-30" src="src/Images/star.svg" alt="" />
-      </div><img className="absolute top-0 left-48 z-0 " src="src/Images/layer-blur.svg" alt="" />
+      </div><img className="absolute top-0 left-48 z-0 " src={`${darkMode ? 'src/Images/layer-blur.svg':''}`} alt="" />
       <section className={`pt-35 pb-24  ${darkMode ? 'bg-body' : 'bg-white'}`}>
         <div className="container px-4 mx-auto">
           <div className="text-center"><span className="inline-block mt-8 text-sm text-blueI font-medium tracking-tighter">Recientes</span>
@@ -57,7 +57,7 @@ const Index: React.FC = () => {
                     <div className="relative w-full">
                         <img src="src/Images/opcion1.jpg" className="mb-3 h-auto w-full rounded-xl 3xl:h-full 3xl:w-full" alt=""/>
                         <button className="absolute top-3 right-3 flex items-center justify-center rounded-full bg-blueI p-1 text-brand-500 hover:cursor-pointer">
-                            <div className="flex h-full w-full items-center justify-center rounded-full font-medium">
+                            <div className="flex h-full w-14 items-center justify-center rounded-full font-medium">
                                 Lunes
                             </div>
                         </button>
@@ -78,14 +78,14 @@ const Index: React.FC = () => {
                     <div className="relative w-full">
                         <img src="src/Images/opcion1.jpg" className="mb-3 h-auto w-full rounded-xl 3xl:h-full 3xl:w-full" alt=""/>
                         <button className="absolute top-3 right-3 flex items-center justify-center rounded-full bg-orange p-1 text-brand-500 hover:cursor-pointer">
-                            <div className="flex h-full w-full items-center justify-center rounded-full font-medium">
-                                Vieres
+                            <div className="flex h-full w-14 items-center justify-center rounded-full font-medium">
+                                Viernes
                             </div>
                         </button>
                     </div>
                     <div className="mb-3 flex items-center justify-between px-1 md:items-start">
                         <div className="mb-2">
-                            <p className={`text-lg font-bold ${darkMode ? 'text-black':'text-white '}`}> Forecast#1 </p>
+                            <p className={`text-lg font-bold ${darkMode ? 'text-black':'text-white '}`}> Forecast#2 </p>
                             <p className="mt-1 text-sm font-medium text-gray-600 md:mt-2"> 14/03/2025 </p>
                         </div>
                         <div className="flex items-center justify-between md:items-center lg:justify-between ">
@@ -99,14 +99,14 @@ const Index: React.FC = () => {
                     <div className="relative w-full">
                         <img src="src/Images/opcion1.jpg" className="mb-3 h-auto w-full rounded-xl 3xl:h-full 3xl:w-full" alt=""/>
                         <button className="absolute top-3 right-3 flex items-center justify-center rounded-full bg-blueI p-1 text-brand-500 hover:cursor-pointer">
-                            <div className="flex h-full w-full items-center justify-center rounded-full font-medium">
+                            <div className="flex h-full w-14 items-center justify-center rounded-full font-medium">
                                 Lunes
                             </div>
                         </button>
                     </div>
                     <div className="mb-3 flex items-center justify-between px-1 md:items-start">
                         <div className="mb-2">
-                            <p className={`text-lg font-bold ${darkMode ? 'text-black':'text-white '}`}> Forecast#1 </p>
+                            <p className={`text-lg font-bold ${darkMode ? 'text-black':'text-white '}`}> Forecast#3 </p>
                             <p className="mt-1 text-sm font-medium text-gray-600 md:mt-2"> 17/03/2025 </p>
                         </div>
                         <div className="flex items-center justify-between md:items-center lg:justify-between ">

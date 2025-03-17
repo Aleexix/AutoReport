@@ -22,7 +22,7 @@ const ContactUs = () => {
               <div className="w-full md:w-1/2 p-2">
                 <div className= {`mb-2 border  overflow-hidden rounded-3xl ${darkMode ? 'border-white focus-within:border-blueI':'border-black focus-within:border-blueI'}`}>
                   <input className="pl-6 pr-16 py-4 text-gray-300 w-full placeholder-gray-400 outline-none bg-transparent" type="text" placeholder="Nombre"/>
-                </div>
+                </div><img className="absolute top-0 left-48 z-0 " src={`${darkMode ? 'src/Images/layer-blur.svg':''}`} alt="" />
               </div>
               <div className="w-full md:w-1/2 p-2">
               <div className= {`mb-2 border  overflow-hidden rounded-3xl ${darkMode ? 'border-white focus-within:border-blueI':'border-black focus-within:border-blueI'}`}>
@@ -57,7 +57,7 @@ const ContactUs = () => {
             <div className="flex flex-wrap justify-center max-w-xs mx-auto mb-6">
               <div className="w-full"><a className="block px-14 py-4 text-center font-medium tracking-2xl border-2 border-blueI bg-blueI hover:bg-blueI text-black focus:ring-4 focus:ring-blueI focus:ring-opacity-40 rounded-full transition-transform duration-300 transform hover:scale-105" href="#">Enviar</a></div>
             </div>
-            <p className= {`text-sm max-w-xs mx-auto ${darkMode ? 'text-gray-300':'text-gray-700'}`}>Su información será utilizada de acuerdo con nuestra Política de privacidad. Usted puede opf fuera en cualquier momento</p>
+            <p className= {`text-sm max-w-xs mx-auto ${darkMode ? 'text-gray-300':'text-gray-700'}`}>Su información será utilizada de acuerdo con nuestra Política de privacidad. Usted se puede comunicar en cualquier momento</p>
           </div>
         </div>
       </section>
