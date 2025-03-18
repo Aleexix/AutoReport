@@ -22,7 +22,7 @@ const Maintenance = () => {
 <>
 <section className={`py-2 ${ darkMode ? 'bg-body' : 'bg-white'}`}>
         <div className="container px-4 mx-auto ">
-          <div className={`relative pt-20 px-4 overflow-hidden rounded-3xl ${darkMode ? ' bg-gray-900 bg-opacity-20' : 'bg-gray-900'}`}>
+          <div className={`relative pt-20 px-4 overflow-hidden rounded-3xl ${darkMode ? ' bg-gray-800 bg-opacity-20' : 'bg-gray-900'}`}>
             <div className="text-center md:max-w-xl mx-auto removed pb-20"><span className="inline-block mb-4 text-sm text-blueI font-medium tracking-tighter">{language === 'es' ? 'Redes de comunicacion':'Communication networks'}</span>
               <h2 className="font-heading mb-6 text-7xl text-white tracking-8xl">{language === 'es' ? '¿Necesitas Ayuda?':'Do you need help?'}</h2>
               <div>

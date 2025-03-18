@@ -22,8 +22,8 @@ const Footer = () => {
         const { language } = languageContext;
       
     return (
-        <footer className= {`mt-24 overflow-hidden ${darkMode ? 'bg-gray-50 ' : 'bg-body'} `} >
-            
+        <footer className= {`overflow-hidden ${darkMode ? 'bg-gray-50 ' : 'bg-body'} `} >
+            <div className= {`py-12  border-none rounded-b-7xl ${darkMode ? 'bg-body': 'bg-white'} `}></div>
             <div className="py-8">
 
                 {/* Menú de navegación */}

@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
         <div className="px-2">
           <div className="flex items-center justify-between pt-6 -m-2">
             <div className="w-auto p-2 ml-12">
-              <a className="relative z-10 inline-block ml-10" href="#">
+              <a className="relative z-10 inline-block ml-10" href="src/pages/index.tsx">
                 <img src={darkMode ? "/Frame 1 (5).svg" : "/Frame 1 (6).svg"} alt="Logo" />
               </a>
             </div>
