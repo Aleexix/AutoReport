@@ -1,20 +1,29 @@
 import { Link } from "react-router-dom";
 import React, { useContext } from "react";
 import { ThemeContext } from '../context/Themecontext';
+import { LanguageContext, LanguageToggle } from "../context/LanguageProvider";
 
 const Navbar: React.FC = () => {
   const themeContext = useContext(ThemeContext);
+  const languageContext = useContext(LanguageContext);
 
   if (!themeContext) {
     throw new Error("Navbar debe estar dentro de un ThemeProvider");
   }
+  if (!languageContext) {
+    throw new Error("MyComponent debe estar dentro de un LanguageProvider");
+  }
 
   const { darkMode, toggleTheme } = themeContext;
+
+  const { language } = languageContext;
 
   return (
     <div className={`${darkMode ? 'bg-body' : 'bg-white'}`}>
       <p className={`py-4 ${darkMode ? 'bg-blueO' : 'bg-blueO'} text-white text-center`}>
-        ¿Quieres ahorrar tiempo con reportes automáticos? Sin duda!
+        {language === 'es' 
+          ? '¿Quieres ahorrar tiempo con reportes automáticos? ¡Sin duda!' 
+          : 'Want to save time with automatic reports? Absolutely!'}
       </p>
       <section className="relative overflow-visible">
         <div className="px-2">
@@ -22,7 +31,6 @@ const Navbar: React.FC = () => {
             <div className="w-auto p-2 ml-12">
               <a className="relative z-10 inline-block ml-10" href="#">
                 <img src={darkMode ? "/Frame 1 (5).svg" : "/Frame 1 (6).svg"} alt="Logo" />
-
               </a>
             </div>
             <div className="p-2 z-20">
@@ -30,13 +38,13 @@ const Navbar: React.FC = () => {
                 <nav className="w-auto hidden lg:block">
                   <ul className="flex items-center mr-12">
                     <li className={`mr-12 ${darkMode ? 'text-white' : 'text-black'} font-medium hover:text-opacity-90 tracking-tighter`}>
-                      <Link to="/sobre nosotros">Nosotros</Link>
+                      <Link to="/sobre nosotros">{language === 'es' ? 'Nosotros' : 'About us'}</Link>
                     </li>
                     <li className={`mr-12 ${darkMode ? 'text-white' : 'text-black'} font-medium hover:text-opacity-90 tracking-tighter`}>
-                      <Link to="/contactanos">Ayuda</Link>
+                      <Link to="/contactanos">{language === 'es' ? 'Ayuda' : 'Help'}</Link>
                     </li>
                     <li className={`font-medium hover:text-opacity-90 tracking-tighter ${darkMode ? 'text-white' : 'text-black'}`}>
-                      <Link to="/semanal">Historico</Link>
+                      <Link to="/semanal">{language === 'es' ? 'Histórico' : 'History'}</Link>
                     </li>
                   </ul>
                 </nav>
@@ -46,13 +54,18 @@ const Navbar: React.FC = () => {
                       className={`inline-block px-8 py-4 ${darkMode ? 'text-white' : 'text-black'} hover:text-black tracking-tighter hover:bg-blueI border-2 border-blueI focus:border-blueI focus:border-opacity-40 hover:border-blueI focus:ring-4 focus:ring-blueI focus:ring-opacity-40 rounded-full transition duration-300`}
                       to="/"
                     >
-                      Tu reporte
+                      {language === 'es' ? 'Tu reporte' : 'Your report'}
                     </Link>
                     <div className="flex items-center justify-center">
+                      <div className="ml-14">
+                      <LanguageToggle />
+                      </div>
+                      
+                      {/* Botón de cambio de tema */}
                       <button
                         onClick={toggleTheme}
-                        className="ml-36 mr-8 p-2 text-white border-blueI focus:ring-blueI focus:border-blueI bg-blueI hover:bg-blue rounded-full transition-transform transform duration-300 hover:scale-110"
-                        aria-label="Cambiar tema"
+                        className="mr-8 p-2 text-white border-blueI focus:ring-blueI focus:border-blueI bg-blueI hover:bg-blue rounded-full transition-transform transform duration-300 hover:scale-110"
+                        aria-label={language === 'es' ? 'Cambiar tema' : 'Toggle theme'}
                       >
                         {darkMode ? (
                           // Ícono de sol (Modo oscuro activado)
@@ -95,7 +108,6 @@ const Navbar: React.FC = () => {
                         )}
                       </button>
                     </div>
-
                   </div>
                 </div>
               </div>

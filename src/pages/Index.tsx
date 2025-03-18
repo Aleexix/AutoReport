@@ -1,18 +1,25 @@
 import { Link } from "react-router-dom";
 import "../Global.css";
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 import { ThemeContext } from '../context/Themecontext';
+import { LanguageContext } from "../context/LanguageProvider";
 
 
 
 const Index: React.FC = () => {
   const themeContext = useContext(ThemeContext);
+  const languageContext = useContext(LanguageContext);
 
   if (!themeContext) {
     throw new Error("Index debe estar dentro de un ThemeProvider");
   }
+  if (!languageContext) {
+    throw new Error("MyComponent debe estar dentro de un LanguageProvider");
+  }
 
   const { darkMode} = themeContext;
+
+  const { language } = languageContext;
 
   return (
     <>
@@ -28,13 +35,13 @@ const Index: React.FC = () => {
               </div>
 
               <div className="w-full  md:w-1/2 p-8 lg:p-12">
-                <h2 className={`mb-6 text-6xl md:text-7xl tracking-tighter  ${darkMode ? 'text-white' : 'text-black'}`}>Descarga hoy tu reporte semanal</h2>
+                <h2 className={`mb-6 text-6xl md:text-7xl tracking-tighter  ${darkMode ? 'text-white' : 'text-black'}`}>{language === 'es' ? 'Descarga hoy tu reporte semanal':'Download your weekly report today'}</h2>
                 <Link to={"#"}>
                   <button className="flex items-center px-8 py-4 text-black font-medium tracking-tighter bg-blueI hover:bg-blue-700 border-2 border-blueI focus:border-blueI focus:ring-4 focus:ring-blueI focus:ring-opacity-40 rounded-full transition-transform duration-300 transform hover:scale-105">
                     <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                       <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
                     </svg>
-                    <span>Descargar</span>
+                    <span>{language === 'es' ?'Descargar': 'Download'}</span>
                   </button>
                 </Link>
               </div>
@@ -46,9 +53,9 @@ const Index: React.FC = () => {
       </div><img className="absolute top-0 left-48 z-0 " src={`${darkMode ? 'src/Images/layer-blur.svg':''}`} alt="" />
       <section className={`pt-35 pb-24  ${darkMode ? 'bg-body' : 'bg-white'}`}>
         <div className="container px-4 mx-auto">
-          <div className="text-center"><span className="inline-block mt-8 text-sm text-blueI font-medium tracking-tighter">Recientes</span>
-            <h2 className={`mb-6 text-7xl lg:text-8xl tracking-8xl mx-auto ${darkMode ? 'text-white ' : 'text-black'} `}>Últimos reportes disponibles </h2>
-            <p className={`mb-20 md:max-w-md mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-800'} `}>Aqui se generaran los reportes mas recientes de los dias Lunes y viernes.</p>
+          <div className="text-center"><span className="inline-block mt-8 text-sm text-blueI font-medium tracking-tighter">{language === 'es' ? 'Recientes':'recent'}</span>
+            <h2 className={`mb-6 text-7xl lg:text-8xl tracking-8xl mx-auto ${darkMode ? 'text-white ' : 'text-black'} `}>{language === 'es' ? 'Últimos reportes disponibles':'Latest available reports'} </h2>
+            <p className={`mb-20 md:max-w-md mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-800'} `}>{language === 'es' ? 'Aqui se generaran los reportes mas recientes de los dias Lunes y viernes.':'Here are the most recent reports of Monday and Friday.'}</p>
           </div>
 
           <div className="flex justify-center gap-8 ">
@@ -58,7 +65,7 @@ const Index: React.FC = () => {
                         <img src="src/Images/opcion1.jpg" className="mb-3 h-auto w-full rounded-xl 3xl:h-full 3xl:w-full" alt=""/>
                         <button className="absolute top-3 right-3 flex items-center justify-center rounded-full bg-blueI p-1 text-brand-500 hover:cursor-pointer">
                             <div className="flex h-full w-14 items-center justify-center rounded-full font-medium">
-                                Lunes
+                                {language === 'es' ? 'Lunes':'Monday'}
                             </div>
                         </button>
                     </div>
@@ -68,7 +75,7 @@ const Index: React.FC = () => {
                             <p className="mt-1 text-sm font-medium text-gray-600 md:mt-2"> 10/03/2025 </p>
                         </div>
                         <div className="flex items-center justify-between md:items-center lg:justify-between ">
-                        <button className=" bg-greenE rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white hover:bg-brand-800 active:bg-greenE transition-transform duration-300 transform hover:scale-105">Descargar</button>
+                        <button className=" bg-greenE rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white hover:bg-brand-800 active:bg-greenE transition-transform duration-300 transform hover:scale-105">{language === 'es' ? 'Descargar':'Download'}</button>
                         </div>
                     </div>
                 </div>
@@ -79,7 +86,7 @@ const Index: React.FC = () => {
                         <img src="src/Images/opcion1.jpg" className="mb-3 h-auto w-full rounded-xl 3xl:h-full 3xl:w-full" alt=""/>
                         <button className="absolute top-3 right-3 flex items-center justify-center rounded-full bg-orange p-1 text-brand-500 hover:cursor-pointer">
                             <div className="flex h-full w-14 items-center justify-center rounded-full font-medium">
-                                Viernes
+                                {language === 'es' ? 'Viernes':'Friday'}
                             </div>
                         </button>
                     </div>
@@ -89,7 +96,7 @@ const Index: React.FC = () => {
                             <p className="mt-1 text-sm font-medium text-gray-600 md:mt-2"> 14/03/2025 </p>
                         </div>
                         <div className="flex items-center justify-between md:items-center lg:justify-between ">
-                        <button className=" bg-greenE rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white hover:bg-brand-800 active:bg-greenE transition-transform duration-300 transform hover:scale-105">Descargar</button>
+                        <button className=" bg-greenE rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white hover:bg-brand-800 active:bg-greenE transition-transform duration-300 transform hover:scale-105">{language === 'es' ? 'Descargar':'Download'}</button>
                         </div>
                     </div>
                 </div>
@@ -100,7 +107,7 @@ const Index: React.FC = () => {
                         <img src="src/Images/opcion1.jpg" className="mb-3 h-auto w-full rounded-xl 3xl:h-full 3xl:w-full" alt=""/>
                         <button className="absolute top-3 right-3 flex items-center justify-center rounded-full bg-blueI p-1 text-brand-500 hover:cursor-pointer">
                             <div className="flex h-full w-14 items-center justify-center rounded-full font-medium">
-                                Lunes
+                                {language === 'es' ? 'Lunes':'Monday'}
                             </div>
                         </button>
                     </div>
@@ -110,7 +117,7 @@ const Index: React.FC = () => {
                             <p className="mt-1 text-sm font-medium text-gray-600 md:mt-2"> 17/03/2025 </p>
                         </div>
                         <div className="flex items-center justify-between md:items-center lg:justify-between ">
-                        <button className=" bg-greenE rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white hover:bg-brand-800 active:bg-greenE transition-transform duration-300 transform hover:scale-105">Descargar</button>
+                        <button className=" bg-greenE rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white hover:bg-brand-800 active:bg-greenE transition-transform duration-300 transform hover:scale-105">{language === 'es' ? 'Descargar':'Download'}</button>
                         </div>
                     </div>
                 </div>
@@ -122,3 +129,4 @@ const Index: React.FC = () => {
   );
 }
 export default Index;
+

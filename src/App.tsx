@@ -9,6 +9,7 @@ import Weekly from "./pages/Weekly";
 import ContactUs from "./pages/Contact us";
 import ScrollToTop from './components/ScrollTop';
 import { ThemeProvider } from "./context/Themecontext";
+import { LanguageProvider } from "./context/LanguageProvider";
 
 
 
@@ -17,6 +18,7 @@ function App() {
   return (
     <Router>
       <ThemeProvider>
+        <LanguageProvider>
       <Navbar />
       <Routes>
         <Route path="/" element={<Index />} />
@@ -27,6 +29,7 @@ function App() {
       <ScrollToTop />
       <Maintenance />
       <Footer />
+      </LanguageProvider>
       </ThemeProvider>
     </Router>
   );
