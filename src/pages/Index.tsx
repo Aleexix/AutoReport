@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../Global.css";
-import React, { useContext} from "react";
+import React, { useContext } from "react";
 import { ThemeContext } from '../context/Themecontext';
 import { LanguageContext } from "../context/LanguageProvider";
 
@@ -17,7 +17,7 @@ const Index: React.FC = () => {
     throw new Error("MyComponent debe estar dentro de un LanguageProvider");
   }
 
-  const { darkMode} = themeContext;
+  const { darkMode } = themeContext;
 
   const { language } = languageContext;
 
@@ -35,13 +35,13 @@ const Index: React.FC = () => {
               </div>
 
               <div className="w-full  md:w-1/2 p-8 lg:p-12">
-                <h2 className={`mb-6 text-6xl md:text-7xl tracking-tighter  ${darkMode ? 'text-white' : 'text-black'}`}>{language === 'es' ? 'Descarga hoy tu reporte semanal':'Download your weekly report today'}</h2>
+                <h2 className={`mb-6 text-6xl md:text-7xl tracking-tighter  ${darkMode ? 'text-white' : 'text-black'}`}>{language === 'es' ? 'Descarga hoy tu reporte semanal' : 'Download your weekly report today'}</h2>
                 <Link to={"#"}>
                   <button className="flex items-center px-8 py-4 text-black font-medium tracking-tighter bg-blueI hover:bg-blue-700 border-2 border-blueI focus:border-blueI focus:ring-4 focus:ring-blueI focus:ring-opacity-40 rounded-full transition-transform duration-300 transform hover:scale-105">
                     <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
                       <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
                     </svg>
-                    <span>{language === 'es' ?'Descargar': 'Download'}</span>
+                    <span>{language === 'es' ? 'Descargar' : 'Download'}</span>
                   </button>
                 </Link>
               </div>
@@ -50,78 +50,87 @@ const Index: React.FC = () => {
         </div>
         <img className="absolute bottom-0  right-0" src={`${darkMode ? 'src/Images/lines2.svg' : 'src/Images/Group 1.svg'}  `} alt="" />
         <img className="absolute right-14 z-30" src="src/Images/star.svg" alt="" />
-      </div><img className="absolute top-0 left-48 z-0 " src={`${darkMode ? 'src/Images/layer-blur.svg':''}`} alt="" />
+      </div><img className="absolute top-0 left-48 z-0 " src={`${darkMode ? 'src/Images/layer-blur.svg' : ''}`} alt="" />
       <section className={`pt-35 pb-24  ${darkMode ? 'bg-body' : 'bg-white'}`}>
         <div className="container px-4 mx-auto">
-          <div className="text-center"><span className="inline-block mt-8 text-sm text-blueI font-medium tracking-tighter">{language === 'es' ? 'Recientes':'recent'}</span>
-            <h2 className={`mb-6 text-7xl lg:text-8xl tracking-8xl mx-auto ${darkMode ? 'text-white ' : 'text-black'} `}>{language === 'es' ? 'Últimos reportes disponibles':'Latest available reports'} </h2>
-            <p className={`mb-20 md:max-w-md mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-800'} `}>{language === 'es' ? 'Aqui se generaran los reportes mas recientes de los dias Lunes y viernes.':'Here are the most recent reports of Monday and Friday.'}</p>
+          <div className="text-center"><span className="inline-block mt-8 text-sm text-blueI font-medium tracking-tighter">{language === 'es' ? 'Recientes' : 'recent'}</span>
+            <h2 className={`mb-6 text-7xl lg:text-8xl tracking-8xl mx-auto ${darkMode ? 'text-white ' : 'text-black'} `}>{language === 'es' ? 'Últimos reportes disponibles' : 'Latest available reports'} </h2>
+            <p className={`mb-20 md:max-w-md mx-auto ${darkMode ? 'text-gray-300' : 'text-gray-800'} `}>{language === 'es' ? 'Aqui se generaran los reportes mas recientes de los dias Lunes y viernes.' : 'Here are the most recent reports of Monday and Friday.'}</p>
           </div>
 
           <div className="flex justify-center gap-8 ">
-          <div className= {`relative flex flex-col rounded-[20px] max-w-[300px] h-64 bg-clip-border  w-full !p-4 ${darkMode ? 'bg-white' : 'bg-body'} ` }>
-                <div className="h-full w-full">
-                    <div className="relative w-full">
-                        <img src="src/Images/opcion1.jpg" className="mb-3 h-auto w-full rounded-xl 3xl:h-full 3xl:w-full" alt=""/>
-                        <button className="absolute top-3 right-3 flex items-center justify-center rounded-full bg-blueI p-1 text-brand-500 hover:cursor-pointer">
-                            <div className="flex h-full w-14 items-center justify-center rounded-full font-medium">
-                                {language === 'es' ? 'Lunes':'Monday'}
-                            </div>
-                        </button>
+            <div className={`relative flex flex-col rounded-[20px] max-w-[300px] h-72 bg-clip-border w-full !p-4 border border-black bg-white ${darkMode ? 'shadow-lg hover:shadow-gray-500  hover:shadow-2xl transition-transform duration-300 hover:-translate-y-2' : 'shadow-lg hover:shadow-2xl hover:shadow-black transition-transform duration-300 hover:-translate-y-2'}`}>
+              <div className="h-full w-full">
+                <div className="relative w-full">
+                  <img src="src/Images/opcion3.jpg" className="mb-3 h-auto w-full rounded-xl 3xl:h-full 3xl:w-full" alt="" />
+                  <div className="absolute top-3 right-3 flex items-center justify-center rounded-full bg-blueI p-1 text-brand-500">
+                    <div className="flex h-full w-16 items-center justify-center rounded-full font-medium">
+                      {language === 'es' ? 'Lunes' : 'Monday'}
                     </div>
-                    <div className="mb-3 flex items-center justify-between px-1 md:items-start">
-                        <div className="mb-2">
-                            <p className={`text-lg font-bold ${darkMode ? 'text-black':'text-white '}`}> Forecast#1 </p>
-                            <p className="mt-1 text-sm font-medium text-gray-600 md:mt-2"> 10/03/2025 </p>
-                        </div>
-                        <div className="flex items-center justify-between md:items-center lg:justify-between ">
-                        <button className=" bg-greenE rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white hover:bg-brand-800 active:bg-greenE transition-transform duration-300 transform hover:scale-105">{language === 'es' ? 'Descargar':'Download'}</button>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-            </div>
-            <div className= {`relative flex flex-col rounded-[20px] max-w-[300px] h-64 bg-clip-border  w-full !p-4 ${darkMode ? 'bg-white' : 'bg-body'} ` }>
-                <div className="h-full w-full">
-                    <div className="relative w-full">
-                        <img src="src/Images/opcion1.jpg" className="mb-3 h-auto w-full rounded-xl 3xl:h-full 3xl:w-full" alt=""/>
-                        <button className="absolute top-3 right-3 flex items-center justify-center rounded-full bg-orange p-1 text-brand-500 hover:cursor-pointer">
-                            <div className="flex h-full w-14 items-center justify-center rounded-full font-medium">
-                                {language === 'es' ? 'Viernes':'Friday'}
-                            </div>
-                        </button>
-                    </div>
-                    <div className="mb-3 flex items-center justify-between px-1 md:items-start">
-                        <div className="mb-2">
-                            <p className={`text-lg font-bold ${darkMode ? 'text-black':'text-white '}`}> Forecast#2 </p>
-                            <p className="mt-1 text-sm font-medium text-gray-600 md:mt-2"> 14/03/2025 </p>
-                        </div>
-                        <div className="flex items-center justify-between md:items-center lg:justify-between ">
-                        <button className=" bg-greenE rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white hover:bg-brand-800 active:bg-greenE transition-transform duration-300 transform hover:scale-105">{language === 'es' ? 'Descargar':'Download'}</button>
-                        </div>
-                    </div>
+                <div className="mb-3 flex items-center justify-between px-1 md:items-start">
+                  <div className="mb-2">
+                    <p className="text-lg font-bold text-black"> Forecast#1 </p>
+                    <p className="mt-1 text-sm font-medium text-gray-600 md:mt-2"> 10/03/2025 </p>
+                  </div>
+                  <div className="flex items-center justify-between md:items-center lg:justify-between ">
+                    <button className="bg-greenE rounded-[20px] bg-brand-900 px-4 py-2 text-base text-white hover:bg-brand-800 active:bg-greenE transition-transform duration-300 transform hover:scale-105">
+                      {language === 'es' ? 'Descargar' : 'Download'}
+                    </button>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div className= {`relative flex flex-col rounded-[20px] max-w-[300px] h-64 bg-clip-border  w-full !p-4 ${darkMode ? 'bg-white' : 'bg-body'} ` }>
-                <div className="h-full w-full">
-                    <div className="relative w-full">
-                        <img src="src/Images/opcion1.jpg" className="mb-3 h-auto w-full rounded-xl 3xl:h-full 3xl:w-full" alt=""/>
-                        <button className="absolute top-3 right-3 flex items-center justify-center rounded-full bg-blueI p-1 text-brand-500 hover:cursor-pointer">
-                            <div className="flex h-full w-14 items-center justify-center rounded-full font-medium">
-                                {language === 'es' ? 'Lunes':'Monday'}
-                            </div>
-                        </button>
+
+            <div className={`relative flex flex-col rounded-[20px] max-w-[300px] h-72 bg-clip-border w-full !p-4 border border-black bg-white ${darkMode ? 'shadow-lg hover:shadow-gray-500 hover:shadow-2xl transition-transform duration-300 hover:-translate-y-2' : 'shadow-lg hover:shadow-2xl hover:shadow-black transition-transform duration-300 hover:-translate-y-2'}`}>
+              <div className="h-full w-full">
+                <div className="relative w-full">
+                  <img src="src/Images/opcion3.jpg" className="mb-3 h-auto w-full rounded-xl 3xl:h-full 3xl:w-full" alt="" />
+                  <div className="absolute top-3 right-3 flex items-center justify-center rounded-full bg-orange p-1 text-brand-500">
+                    <div className="flex h-full w-16 items-center justify-center rounded-full font-medium">
+                      {language === 'es' ? 'Viernes' : 'Friday'}
                     </div>
-                    <div className="mb-3 flex items-center justify-between px-1 md:items-start">
-                        <div className="mb-2">
-                            <p className={`text-lg font-bold ${darkMode ? 'text-black':'text-white '}`}> Forecast#3 </p>
-                            <p className="mt-1 text-sm font-medium text-gray-600 md:mt-2"> 17/03/2025 </p>
-                        </div>
-                        <div className="flex items-center justify-between md:items-center lg:justify-between ">
-                        <button className=" bg-greenE rounded-[20px] bg-brand-900 px-4 py-2 text-base font-medium text-white hover:bg-brand-800 active:bg-greenE transition-transform duration-300 transform hover:scale-105">{language === 'es' ? 'Descargar':'Download'}</button>
-                        </div>
-                    </div>
+                  </div>
                 </div>
+                <div className="mb-3 flex items-center justify-between px-1 md:items-start">
+                  <div className="mb-2">
+                    <p className="text-lg font-bold text-black"> Forecast#1 </p>
+                    <p className="mt-1 text-sm font-medium text-gray-600 md:mt-2"> 10/03/2025 </p>
+                  </div>
+                  <div className="flex items-center justify-between md:items-center lg:justify-between ">
+                    <button className="bg-greenE rounded-[20px] bg-brand-900 px-4 py-2 text-base text-white hover:bg-brand-800 active:bg-greenE transition-transform duration-300 transform hover:scale-105">
+                      {language === 'es' ? 'Descargar' : 'Download'}
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <div className={`relative flex flex-col rounded-[20px] max-w-[300px] h-72 bg-clip-border w-full !p-4 border border-black bg-white ${darkMode ? 'shadow-lg hover:shadow-gray-500 hover:shadow-2xl transition-transform duration-300 hover:-translate-y-2' : 'shadow-lg hover:shadow-2xl hover:shadow-black transition-transform duration-300 hover:-translate-y-2'}`}>
+              <div className="h-full w-full">
+                <div className="relative w-full">
+                  <img src="src/Images/opcion3.jpg" className="mb-3 h-auto w-full rounded-xl 3xl:h-full 3xl:w-full" alt="" />
+                  <div className="absolute top-3 right-3 flex items-center justify-center rounded-full bg-blueI p-1 text-brand-500">
+                    <div className="flex h-full w-16 items-center justify-center rounded-full font-medium">
+                      {language === 'es' ? 'Lunes' : 'Monday'}
+                    </div>
+                  </div>
+                </div>
+                <div className="mb-3 flex items-center justify-between px-1 md:items-start">
+                  <div className="mb-2">
+                    <p className="text-lg font-bold text-black"> Forecast#1 </p>
+                    <p className="mt-1 text-sm font-medium text-gray-600 md:mt-2"> 10/03/2025 </p>
+                  </div>
+                  <div className="flex items-center justify-between md:items-center lg:justify-between ">
+                    <button className="bg-greenE rounded-[20px] bg-brand-900 px-4 py-2 text-base text-white hover:bg-brand-800 active:bg-greenE transition-transform duration-300 transform hover:scale-105">
+                      {language === 'es' ? 'Descargar' : 'Download'}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

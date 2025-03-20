@@ -51,7 +51,7 @@ export const LanguageToggle = () => {
   return (
     <button
       onClick={toggleLanguage}
-      className="mr-5 transition-transform transform duration-300 hover:scale-110 focus:outline-none"
+      className="mr-5 pt-2 transition-transform transform duration-300 hover:scale-110 focus:outline-none"
       aria-label={language === 'es' ? 'Cambiar a inglés' : 'Change to Spanish'}
     >
       <div className="w-8 h-8 overflow-hidden rounded-full border border-gray-200 shadow-sm">
