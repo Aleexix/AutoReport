@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
                 <img src={darkMode ? "/Frame 1 (5).svg" : "/Frame 1 (6).svg"} alt="Logo" />
               </a>
             </div>
-            <div className="p-2 z-20">
+            <div className="p-2 z-20">  
               <div className="flex flex-wrap items-center">
                 <nav className="w-auto hidden lg:block">
                   <ul className="flex items-center mr-12">

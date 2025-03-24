@@ -7,6 +7,15 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      animation: {
+        float: "float 2s ease-in-out infinite",
+      },
+      keyframes:{
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-15px)" },
+        },
+      },
       colors: {
         blueO: "#001F3F", // Azul oscuriño
         blueI: "#1063FF", // Azul intermediño

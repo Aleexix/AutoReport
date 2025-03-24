@@ -23,14 +23,19 @@ const Index: React.FC = () => {
 
   return (
     <>
-      <div className={` relative pt-20 pb-20 ${darkMode ? 'bg-body' : 'bg-white'}`}>
+      <div className={` relative pb-20 ${darkMode ? 'bg-body' : 'bg-white'}`}>
         <div className="relative z-10 container px-4 mx-auto">
 
           <div className="max-w-5xl mx-auto">
             <div className="flex flex-wrap lg:items-center -m-8 lg:-m-12">
-              <img className="absolute top-4 -right-16 " src="src/Images/star.svg" alt="" /><img className="absolute top-10 -right-24" src="src/Images/star2.svg" alt="" />
+              <img className="absolute top-40 -right-16 " src="src/Images/star.svg" alt="" /><img className="absolute top-44 -right-24" src="src/Images/star2.svg" alt="" />
               <div className="w-full md:w-1/2 p-8 lg:p-1">
-                <div className=" mx-auto"><img className="rounded-3xl" src="src/Images/freepik__adjust__61457.png" alt="" />
+                <div className="p-8">
+                  <img
+                    className="rounded-3xl animate-float"
+                    src="src/Images/freepik__background__34186.png"
+                    alt=""
+                  />
                 </div>
               </div>
 
@@ -49,7 +54,7 @@ const Index: React.FC = () => {
           </div>
         </div>
         <img className="absolute bottom-0  right-0" src={`${darkMode ? 'src/Images/lines2.svg' : 'src/Images/Group 1.svg'}  `} alt="" />
-        <img className="absolute right-14 z-30" src="src/Images/star.svg" alt="" />
+        <img className="absolute top-96 right-16 z-30" src="src/Images/star.svg" alt="" />
       </div><img className="absolute top-0 left-48 z-0 " src={`${darkMode ? 'src/Images/layer-blur.svg' : ''}`} alt="" />
       <section className={`pt-35 pb-24  ${darkMode ? 'bg-body' : 'bg-white'}`}>
         <div className="container px-4 mx-auto">
