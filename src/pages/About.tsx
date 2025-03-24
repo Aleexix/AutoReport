@@ -28,7 +28,7 @@ const About = () => {
         <>
             <section className={`pt-10 overflow-hidden ${darkMode ? 'bg-body' : 'bg-white'}`}>
                 <div className="container px-4 mx-auto">
-                <img className="absolute top-52 right-24 z-10" src="src/Images/star.svg" alt="" />
+                    <img className="absolute top-52 right-24 z-10" src="src/Images/star.svg" alt="" />
                     <img className="absolute top-56 right-32 z-10" src="src/Images/star2.svg" alt="" />
                     <div className="md:max-w-xl text-center mx-auto mb-50 mt-8 ">
                         <span className="inline-block mb-4 text-sm text-blueI font-medium tracking-tighter">
@@ -59,26 +59,28 @@ const About = () => {
                                     {language === 'es' ? 'Hola! nosotros somos practicantes de IBM en la unidad de ventas en el año 2025, este proyecto sale de una necesidad de automatizacion en la unidad, ' : 'Hello! we are IBM practitioners in the sales unit in the year 2025, this project comes from a need for automation of the unit,'}
                                 </p>
                                 {!isExpanded ? (
-                                <a className="inline-block px-8 py-4 text-black font-medium bg-blueI tracking-tighter hover:bg-blueI border-2 border-blueI focus:border-blueI focus:border-opacity-40 hover:borderblueI focus:ring-4 focus:ring-blueI focus:ring-opacity-40 rounded-full transition-transform duration-300 transform hover:scale-105" href="#"
-                                onClick={toggleReadMore}
-                                    
+                                    <a
+                                        className={`inline-block hover:text-opacity-80 font-medium underline transition duration-500 ${darkMode ? 'text-white' : 'text-black'}`}
+                                        href="#"
+                                        onClick={toggleReadMore}
                                     >
                                         {language === 'es' ? 'Leer mas' : 'Read the rest'}
-                                </a>
-                                ):(
+                                    </a>
+                                ) : (
                                     <>
-                                <p className={`mb-10 text-opacity-60 w-96 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                                {language === 'es' ? 'reduciendo tareas repetitivas y mejorando la eficiencia del equipo. Buscamos implementar soluciones tecnológicas que faciliten el trabajo diario y permitan un acceso más rápido y preciso a la información.' : 'Reducing repetitive tasks and improving team efficiency. We seek to implement technological solutions that facilitate daily work and allow faster and more accurate access to information.'}
-                                <br /> <br />
-                                {language === 'es' ? 'Nuestro objetivo es crear herramientas que simplifiquen la generación de reportes, asegurando mayor rapidez y precisión en la toma de decisiones. ¡Estamos emocionados por este reto y listos para innovar! 🚀':'Our goal is to create tools that simplify the generation of reports, ensuring faster and more accurate decision-making. ¡ We are excited about this challenge and ready to innovate! 🚀 '}
-                                </p>
-                                <a className="inline-block px-8 py-4 text-black font-medium bg-blueI tracking-tighter hover:bg-blueI border-2 border-blueI focus:border-blueI focus:border-opacity-40 hover:borderblueI focus:ring-4 focus:ring-blueI focus:ring-opacity-40 rounded-full transition-transform duration-300 transform hover:scale-105" href="#"
-                                onClick={toggleReadMore}
-                                >
-                                {language === 'es' ? 'Leer menos' : 'Read less'}
-                                    
-                                </a>
-                                </>
+                                        <p className={`mb-10 text-opacity-60 w-96 ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                                            {language === 'es' ? 'reduciendo tareas repetitivas y mejorando la eficiencia del equipo. Buscamos implementar soluciones tecnológicas que faciliten el trabajo diario y permitan un acceso más rápido y preciso a la información.' : 'Reducing repetitive tasks and improving team efficiency. We seek to implement technological solutions that facilitate daily work and allow faster and more accurate access to information.'}
+                                            <br /> <br />
+                                            {language === 'es' ? 'Nuestro objetivo es crear herramientas que simplifiquen la generación de reportes, asegurando mayor rapidez y precisión en la toma de decisiones. ¡Estamos emocionados por este reto y listos para innovar! 🚀' : 'Our goal is to create tools that simplify the generation of reports, ensuring faster and more accurate decision-making. ¡ We are excited about this challenge and ready to innovate! 🚀 '}
+                                        </p>
+                                        <a
+                                            className={`inline-block hover:text-opacity-80 font-medium underline transition duration-500 ${darkMode ? 'text-white' : 'text-black'}`}
+                                            href="#"
+                                            onClick={toggleReadMore}
+                                        >
+                                            {language === 'es' ? 'Leer menos' : 'Read less'}
+                                        </a>
+                                    </>
                                 )}
                             </div>
                         </div>
@@ -113,7 +115,7 @@ const About = () => {
                                 ) : (
                                     <>
                                         <p className={`mb-8 text-lg ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                                           {language === 'es' ? 'Primero, se elaboró el cronograma y, con base en este, se inició el desarrollo del proyecto. Se establecieron los objetivos, alcance y requerimientos, seguidos de la creación de bocetos y maquetas de la interfaz. Luego, se implementó el frontend tomando en cuenta los diseños previos. Posteriormente, se definió la arquitectura del sistema y las APIs necesarias. Después, se desarrolló el bot en IBM RPA para la automatización. A continuación, se implementó el backend en Python, asegurando su correcto funcionamiento. Finalmente, se realizó la integración del bot RPA con el backend y este con el frontend, logrando la conexión completa del sistema.':'First, the timetable was drawn up and, on this basis, the development of the project began. Objectives, scope and requirements were established, followed by the creation of sketches and mock-ups of the interface. The frontend was then implemented taking into account previous designs. Subsequently, the system architecture and the necessary APIs were defined. Then, the bot was developed in IBM RPA for automation. Then, the backend was implemented in Python, ensuring its proper functioning. Finally, the RPA bot was integrated with the backend and this with the frontend, achieving the complete system connection.'} 
+                                            {language === 'es' ? 'Primero, se elaboró el cronograma y, con base en este, se inició el desarrollo del proyecto. Se establecieron los objetivos, alcance y requerimientos, seguidos de la creación de bocetos y maquetas de la interfaz. Luego, se implementó el frontend tomando en cuenta los diseños previos. Posteriormente, se definió la arquitectura del sistema y las APIs necesarias. Después, se desarrolló el bot en IBM RPA para la automatización. A continuación, se implementó el backend en Python, asegurando su correcto funcionamiento. Finalmente, se realizó la integración del bot RPA con el backend y este con el frontend, logrando la conexión completa del sistema.' : 'First, the timetable was drawn up and, on this basis, the development of the project began. Objectives, scope and requirements were established, followed by the creation of sketches and mock-ups of the interface. The frontend was then implemented taking into account previous designs. Subsequently, the system architecture and the necessary APIs were defined. Then, the bot was developed in IBM RPA for automation. Then, the backend was implemented in Python, ensuring its proper functioning. Finally, the RPA bot was integrated with the backend and this with the frontend, achieving the complete system connection.'}
                                         </p>
                                         <a
                                             className={`inline-block hover:text-opacity-80 font-medium underline transition duration-500 ${darkMode ? 'text-white' : 'text-black'}`}
