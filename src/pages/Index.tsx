@@ -184,11 +184,11 @@ const Index: React.FC = () => {
                       className="mb-4 w-full rounded-xl object-cover aspect-video" 
                       alt="Report Preview" 
                     />
-                    <div className="absolute top-4 right-4 flex items-center justify-center rounded-full bg-blueI p-2">
+                    <div className="absolute top-4 right-4 flex items-center justify-center rounded-full bg-blueO p-2">
                       <div className="flex h-full w-20 items-center justify-center rounded-full font-medium text-white text-base">
                         {index % 2 === 0 
                           ? (language === 'es' ? 'Lunes' : 'Monday') 
-                          : (language === 'es' ? 'Viernes' : 'Friday')}
+                          : (language === 'es' ? 'Viernes' : 'Friday ')}
                       </div>
                     </div>
                   </div>
